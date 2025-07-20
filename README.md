@@ -6,19 +6,20 @@
 
 ## 📁 Folder Structure
 
-Aurem/
-├── public/
-│ └── index.html
-├── src/
-│ ├── App.tsx
-│ ├── index.tsx
-│ └── index.css
-├── .babelrc
-├── package.json
-├── tsconfig.json
-├── webpack.config.js
-└── README.md
-
+```
+    Aurem/
+    ├── public/
+    │ └── index.html
+    ├── src/
+    │ ├── App.tsx
+    │ ├── index.tsx
+    │ └── index.css
+    ├── .babelrc
+    ├── package.json
+    ├── tsconfig.json
+    ├── webpack.config.js
+    └── README.md
+```
 ---
 
 ## 🚀 Getting Started
@@ -75,6 +76,7 @@ then visit http://localhost:3000
 6. Config Overview:
 
 .babelrc
+```json
 {
 "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
