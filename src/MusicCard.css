@@ -1,0 +1,176 @@
+.card-container {
+  width: 280px;
+  height: fit-content;
+  background: black;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card-header {
+  align-self: stretch;
+  padding: 16px 12px;
+  background:
+    linear-gradient(
+      235deg,
+      #7ef50a 4%,
+      rgba(119, 211, 29, 0.95) 12%,
+      rgba(62, 97, 28, 0.87) 34%,
+      #0a0909 100%
+    ),
+    linear-gradient(
+      225deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.55) 43%,
+      black 100%
+    );
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track-info {
+  width: 160px;
+  max-width: 160px;
+  padding: 0 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calendar-icon,
+.genre-icon {
+  color: #91e440;
+}
+
+.track-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.track-title {
+  color: white;
+  font-size: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.track-artist {
+  color: #7eff00;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 12px;
+  word-wrap: break-word;
+}
+
+.track-album {
+  align-self: stretch;
+  color: white;
+  font-size: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 11px;
+  word-wrap: break-word;
+}
+
+.track-icon {
+  padding: 0 12px 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.icon-shape {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  left: 6px;
+  top: 6px;
+  color: #7ef50a;
+}
+
+.card-body {
+  align-self: stretch;
+  padding: 12px;
+  overflow: hidden;
+  background-image: url('../public/images/headeset1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.track-meta {
+  align-self: stretch;
+  padding: 0 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-text {
+  color: white;
+  font-size: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.action-buttons {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #ebede9;
+}
+
+.delete {
+  background: #f05770;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-text {
+  color: #0a0909;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
