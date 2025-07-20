@@ -104,7 +104,9 @@
   align-self: stretch;
   padding: 12px;
   overflow: hidden;
-  background-image: url('../public/images/headeset1.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url('../public/images/headeset1.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
