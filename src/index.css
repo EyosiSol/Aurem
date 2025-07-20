@@ -20,6 +20,7 @@ body {
     url('../public/images/headeset1.jpg');
   background-size: cover;
   background-position: center;
+  padding-top: 100px;
 }
 
 /* header on Laptops */
@@ -33,9 +34,13 @@ body {
   border: 1px solid black;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 32px;
   color: var(--neon);
+  padding-left: 32px;
   height: 100px;
+  position: fixed;
+  width: 100vw;
+  z-index: 50;
+  top: 0px;
 }
 
 .header button {
@@ -47,6 +52,7 @@ body {
   border: none;
   border-radius: 8px;
   padding: 8px 16px;
+  margin-right: 108px;
 }
 
 .search {
