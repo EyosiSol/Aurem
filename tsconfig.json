@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "baseUrl": "./src"
   },
-  "include": ["src"],
+  "include": ["src", "components", "public", "types", "base-api"],
   "exclude": ["node_modules"]
 }

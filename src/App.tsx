@@ -1,12 +1,11 @@
 import React from 'react';
+import Header from '../components/header';
 
 const App = () => {
   return (
     <div>
-      <h1>Hello React with Webpack! Damn this thing good</h1>
-      <div className="bg-black text-white p-4 rounded-xl shadow-lg">
-        Tailwind 4 !
-      </div>
+      <Header />
+      <h1>Hello React with Webpack! Damn this thing annoying</h1>
     </div>
   );
 };
