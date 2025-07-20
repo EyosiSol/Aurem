@@ -1,16 +1,25 @@
 import '../src/MusicCard.css';
 import { BiCalendar, BiSolidMusic, BiEditAlt, BiTrash } from 'react-icons/bi';
 import { PiVinylRecordBold } from 'react-icons/pi';
-export default function MusicCard() {
+import { musicCard } from '../types/musictype';
+export default function MusicCard({
+  id,
+  title,
+  artist,
+  album,
+  releaseDate,
+  genre,
+}: musicCard) {
+  console.log('id:', id);
   return (
     <div className="card-container">
       <div className="card-header">
         <div className="track-info">
           <div className="track-text">
-            <div className="track-title">Lose Control</div>
-            <div className="track-artist">Teddy Swims</div>
+            <div className="track-title">{title}</div>
+            <div className="track-artist">{artist}</div>
           </div>
-          <div className="track-album">I’ve Tried Everything but Therapy</div>
+          <div className="track-album">{album}</div>
         </div>
         <div className="track-icon">
           <div>
@@ -25,13 +34,13 @@ export default function MusicCard() {
             <div>
               <BiCalendar className="calendar-icon" />
             </div>
-            <div className="meta-text">2022</div>
+            <div className="meta-text">{releaseDate}</div>
           </div>
           <div className="meta-item">
             <div>
               <PiVinylRecordBold className="genre-icon" />
             </div>
-            <div className="meta-text">Rock & Roll</div>
+            <div className="meta-text">{genre}</div>
           </div>
         </div>
 

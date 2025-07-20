@@ -8,7 +8,6 @@ const App = () => {
     <div>
       <Header />
       <Filter />
-      <h1>Hello React with Webpack! Damn this thing annoying</h1>
       <Section />
     </div>
   );
