@@ -155,9 +155,15 @@
 .edit {
   background: #ebede9;
 }
+.edit:hover {
+  background: #c1c3bf;
+}
 
 .delete {
   background: #f05770;
+}
+.delete:hover {
+  background: #c24459;
 }
 
 .btn-icon {
