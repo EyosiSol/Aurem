@@ -77,3 +77,70 @@ body {
   width: 24px;
   height: 24px;
 }
+
+/* filter section */
+
+.filter {
+  display: flex;
+  background: black;
+  margin: 32px;
+  color: var(--neon);
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-radius: 12px;
+}
+.dropdownfilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: auto;
+}
+
+.dropdown button {
+  width: 120px;
+  height: 32px;
+  background-color: #848383;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #848383;
+  border: 1px solid #848383;
+  margin-top: 2px;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.filterIcon {
+  width: 32px;
+  height: auto;
+}
+.amount {
+  font-size: 18px;
+  color: gray;
+}
