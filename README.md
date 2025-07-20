@@ -77,9 +77,11 @@ then visit http://localhost:3000
 
 .babelrc
 ```json
-{
-"presets": ["@babel/preset-env", "@babel/preset-react"]
-}
+    {
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+```
+
 
 tsconfig.json
 
