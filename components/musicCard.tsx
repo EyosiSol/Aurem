@@ -3,7 +3,7 @@ import { BiCalendar, BiSolidMusic, BiEditAlt, BiTrash } from 'react-icons/bi';
 import { PiVinylRecordBold } from 'react-icons/pi';
 import { musicCard } from '../types/musictype';
 export default function MusicCard({
-  id,
+  id, 
   title,
   artist,
   album,
