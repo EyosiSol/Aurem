@@ -1,7 +1,12 @@
 import React from 'react';
 import { IoMdAdd } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';
-const Header = () => {
+
+type Prop = {
+  openModal: () => void;
+};
+
+const Header = ({ openModal,  }: Prop) => {
   return (
     <div className="header">
       <h1>Aurem</h1>
@@ -15,7 +20,7 @@ const Header = () => {
         />
         <IoSearch className="IoSearch" />
       </div>
-      <button type="submit">
+      <button type="submit" onClick={() => openModal()}>
         <IoMdAdd />
         Add Song
       </button>

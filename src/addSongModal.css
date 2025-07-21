@@ -1,16 +1,21 @@
 /* Overlay */
+
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vdh;
+  height: full;
   background: rgba(53, 50, 50, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 50;
+  padding: 120px 0px;
+  font-family:
+    Space Grotesk,
+    sans-serif;
 }
 
 /* Modal container */
@@ -44,7 +49,6 @@
   color: #91e440;
   font-size: 24px;
   font-weight: 600;
-  font-family: Inter;
   line-height: 24px;
 }
 
@@ -58,14 +62,14 @@
 .subtitle {
   color: #b6d7af;
   font-size: 14px;
-  font-family: Inter;
   line-height: 20px;
-  text-align: center;
 }
 
 .modal-body {
+  padding: 24px 0px 0px 0px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   background: #272626;
-  padding: 12px 32px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -77,11 +81,12 @@
   flex-direction: column;
   gap: 6px;
   width: 340px;
+  border-radius: 12px;
+  padding: 0px 32px 0px;
 }
 
 .label {
   font-size: 14px;
-  font-family: Inter;
   font-weight: 500;
   line-height: 20px;
   color: #8df22b;
@@ -97,28 +102,31 @@
 }
 
 .input-wrapper.large {
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .input-placeholder {
   color: #6a6b69;
   font-size: 14px;
-  font-family: Inter;
   font-weight: 400;
   line-height: 20px;
+  width: 100%;
+  border: none;
+}
+.input-placeholder:focus {
+  outline: none;
 }
 
-.dropdown {
-  width: 160px;
-  height: 36px;
+.dropdownForm {
+  width: 180px;
+  height: 32px;
   background: white;
   border-radius: 6px;
-  outline: 1px solid #6a6b69;
-  padding: 6px 20px;
+  /* outline: 1px solid #6a6b69; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .dropdown-value {
@@ -126,15 +134,16 @@
   font-family: Manrope;
   font-weight: 500;
   line-height: 22.4px;
-  color: #8df22b;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 0px 6px;
+  border-radius: 6px;
 }
 
-.dropdown-icon {
-  width: 11.67px;
-  height: 6.67px;
-  background: #8df22b;
+.dropdown-value:focus {
+  outline: none;
 }
-
 .modal-footer {
   background: #0a0909;
   align-self: stretch;
@@ -145,19 +154,21 @@
   justify-content: flex-end;
   align-items: center;
   gap: 32px;
+  margin-top: 24px;
 }
 
 .btn {
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 14px;
-  font-family: Inter;
   font-weight: 500;
   line-height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .btn.cancel {

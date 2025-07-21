@@ -1,6 +1,6 @@
 .card-container {
-  width: 280px;
-  height: full;
+  width: full;
+  height: 100%;
   background: black;
   overflow: hidden;
   border-radius: 12px;
@@ -13,6 +13,7 @@
 .card-header {
   align-self: stretch;
   padding: 16px 12px;
+  min-height: 35%;
   background:
     linear-gradient(
       235deg,
@@ -34,13 +35,14 @@
 }
 
 .track-info {
-  width: 160px;
-  max-width: 160px;
+  width: 100%;
+  max-width: 240px;
+  /* border: 1px solid white; */
   padding: 0 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .calendar-icon,
@@ -51,7 +53,7 @@
 .track-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .track-title {

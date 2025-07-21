@@ -5,7 +5,7 @@
       "title": "Lose Control",
       "artist": "Teddy Swims",
       "album": "I've Tried Everything But Therapy",
-      "releaseDate": "2022-11-18",
+      "releaseDate": "2022",
       "genre": "Pop Soul"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Blinding Lights",
       "artist": "The Weeknd",
       "album": "After Hours",
-      "releaseDate": "2020-03-20",
+      "releaseDate": "2020",
       "genre": "Synthwave"
     },
     {
@@ -21,7 +21,7 @@
       "title": "As It Was",
       "artist": "Harry Styles",
       "album": "Harry's House",
-      "releaseDate": "2022-04-01",
+      "releaseDate": "2022",
       "genre": "Pop Rock"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Peaches",
       "artist": "Justin Bieber",
       "album": "Justice",
-      "releaseDate": "2021-03-19",
+      "releaseDate": "2021",
       "genre": "R&B"
     },
     {
@@ -37,7 +37,7 @@
       "title": "Bad Habit",
       "artist": "Steve Lacy",
       "album": "Gemini Rights",
-      "releaseDate": "2022-07-15",
+      "releaseDate": "2022",
       "genre": "Alt R&B"
     },
     {
@@ -45,7 +45,7 @@
       "title": "Smells Like Teen Spirit",
       "artist": "Nirvana",
       "album": "Nevermind",
-      "releaseDate": "1991-09-10",
+      "releaseDate": "1991",
       "genre": "Grunge"
     }
   ]
