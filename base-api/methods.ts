@@ -37,3 +37,13 @@ export const updateMusic = async (data: musicCard) => {
 
   return response;
 };
+
+export const searchMusic = async (serach: string) => {
+  const fetchURL = `musics?q=${serach}`;
+  const response = await apiCall({
+    url: fetchURL,
+    method: 'GET',
+  });
+
+  return response;
+};
