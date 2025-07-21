@@ -39,7 +39,7 @@ body {
   height: 100px;
   position: fixed;
   width: 100vw;
-  z-index: 50;
+  z-index: 10;
   top: 0px;
 }
 

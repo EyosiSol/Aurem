@@ -4,6 +4,7 @@ import Filter from '../components/filter';
 import Section from '../components/section';
 import { musicCard } from '../types/musictype';
 import { deleteMusic, fetchMusic } from '../base-api/methods';
+// import AddSongModal from '../components/addSongModal';
 
 const App = () => {
   const [musics, setMusics] = useState<musicCard[]>([]);
@@ -34,6 +35,7 @@ const App = () => {
       <Header />
       <Filter />
       <Section musics={musics} setDeletion={setDeletion} />
+      {/* <AddSongModal /> */}
     </div>
   );
 };
