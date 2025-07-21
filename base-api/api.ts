@@ -1,5 +1,3 @@
-'use server';
-
 const apiUrl = process.env.BASE_URL;
 
 interface CustomError {
@@ -19,6 +17,8 @@ const apiCall = async ({
   data?: unknown;
 }) => {
   const baseUrl = apiUrl;
+  console.log(`url:`, baseUrl);
+
   try {
     const response = await fetch(`${baseUrl}/${url}`, {
       method: method,

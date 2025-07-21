@@ -1,7 +1,7 @@
 {
   "musics": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Lose Control",
       "artist": "Teddy Swims",
       "album": "I've Tried Everything But Therapy",
@@ -9,7 +9,7 @@
       "genre": "Pop Soul"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Blinding Lights",
       "artist": "The Weeknd",
       "album": "After Hours",
@@ -17,7 +17,7 @@
       "genre": "Synthwave"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "As It Was",
       "artist": "Harry Styles",
       "album": "Harry's House",
@@ -25,7 +25,7 @@
       "genre": "Pop Rock"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Peaches",
       "artist": "Justin Bieber",
       "album": "Justice",
@@ -33,7 +33,7 @@
       "genre": "R&B"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Bad Habit",
       "artist": "Steve Lacy",
       "album": "Gemini Rights",
@@ -41,28 +41,12 @@
       "genre": "Alt R&B"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Smells Like Teen Spirit",
       "artist": "Nirvana",
       "album": "Nevermind",
       "releaseDate": "1991-09-10",
       "genre": "Grunge"
-    },
-    {
-      "id": 7,
-      "title": "Don't Start Now",
-      "artist": "Dua Lipa",
-      "album": "Future Nostalgia",
-      "releaseDate": "2020-03-27",
-      "genre": "Disco Pop"
-    },
-    {
-      "id": 8,
-      "title": "Rolling in the Deep",
-      "artist": "Adele",
-      "album": "21",
-      "releaseDate": "2011-01-24",
-      "genre": "Soul Pop"
     }
   ]
 }

@@ -2,15 +2,14 @@ import '../src/MusicCard.css';
 import { BiCalendar, BiSolidMusic, BiEditAlt, BiTrash } from 'react-icons/bi';
 import { PiVinylRecordBold } from 'react-icons/pi';
 import { musicCard } from '../types/musictype';
-export default function MusicCard({
-  id, 
-  title,
-  artist,
-  album,
-  releaseDate,
-  genre,
-}: musicCard) {
-  console.log('id:', id);
+
+type Props = {
+  music: musicCard;
+  setDeletion: (id: number) => void;
+};
+
+export default function MusicCard({ music, setDeletion }: Props) {
+  const { id, title, artist, album, releaseDate, genre } = music;
   return (
     <div className="card-container">
       <div className="card-header">
@@ -51,7 +50,13 @@ export default function MusicCard({
             </div>
             <div className="btn-text">Edit</div>
           </div>
-          <div className="action-btn delete">
+          <div
+            className="action-btn delete"
+            onClick={() => {
+              console.log('clicked:', { title });
+              setDeletion(id);
+            }}
+          >
             <div>
               <BiTrash className="btn-icon" />
             </div>
