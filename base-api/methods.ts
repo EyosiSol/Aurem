@@ -26,3 +26,14 @@ export const deleteMusic = async (id: string) => {
   });
   return response;
 };
+
+export const updateMusic = async (data: musicCard) => {
+  const fetchURL = `musics/${data.id}`;
+  const response = await apiCall({
+    url: fetchURL,
+    method: 'PATCH',
+    data: data,
+  });
+
+  return response;
+};

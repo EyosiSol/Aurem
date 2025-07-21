@@ -7,15 +7,20 @@ import { musicCard } from '../types/musictype';
 type userProps = {
   musics: musicCard[];
   setDeletion: (id: number) => void;
+  setEditing: (data: musicCard) => void;
 };
 
-const Section: React.FC<userProps> = ({ musics, setDeletion }) => {
+const Section: React.FC<userProps> = ({ musics, setDeletion, setEditing }) => {
   return (
     <>
       {musics.length > 0 ? (
         <div className="section">
           {musics.map((music: musicCard) => (
-            <MusicCard music={music} setDeletion={setDeletion} />
+            <MusicCard
+              music={music}
+              setDeletion={setDeletion}
+              setEditing={setEditing}
+            />
           ))}
         </div>
       ) : (

@@ -1,24 +1,28 @@
 import { useState } from 'react';
 import '../src/addSongModal.css';
-import { v4 as uuidv4 } from 'uuid';
-import { addMusic } from '../base-api/methods';
 import { musicCard } from '../types/musictype';
+import { updateMusic } from '../base-api/methods';
 
 type Prop = {
-  openModal: () => void;
+  openEditModal: () => void;
   triggerFetch: () => void;
+  data: musicCard;
 };
 
-export default function AddSongModal({ openModal, triggerFetch }: Prop) {
-  const [title, settitle] = useState<string>('');
-  const [artist, setartist] = useState<string>('');
-  const [genre, setgenre] = useState<string>('Rock & Roll');
-  const [album, setAlbum] = useState<string>('');
-  const [releaseDate, setreleaseDate] = useState<string>('');
+export default function EditSongModal({
+  openEditModal,
+  triggerFetch,
+  data,
+}: Prop) {
+  const [title, settitle] = useState<string>(data.title);
+  const [artist, setartist] = useState<string>(data.artist);
+  const [genre, setgenre] = useState<string>(data.genre);
+  const [album, setAlbum] = useState<string>(data.album);
+  const [releaseDate, setreleaseDate] = useState<string>(data.releaseDate);
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault(); // prevent page reload
-    const id = uuidv4();
+    const id = data.id;
     const formData = {
       id,
       title,
@@ -27,11 +31,11 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
       album,
       releaseDate,
     };
-    console.log(formData); // Send to backend or handle logic
-    const res = await addMusic(formData as unknown as musicCard);
-    console.log('res:', res);
+    console.log('editedForm:', formData); // Send to backend or handle logic
+    const res = await updateMusic(formData as unknown as musicCard);
+    console.log('Update res:', res);
     triggerFetch();
-    openModal();
+    openEditModal();
   };
 
   const handleCancel = () => {
@@ -40,7 +44,8 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
     setgenre('');
     setAlbum('');
     setreleaseDate('');
-    openModal();
+    triggerFetch();
+    openEditModal();
   };
 
   return (
@@ -49,7 +54,7 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
         <div className="modal-header">
           <div className="header-content">
             <div className="title">Add a Song</div>
-            <div className="close" onClick={() => openModal()}>
+            <div className="close" onClick={() => openEditModal()}>
               X
             </div>
           </div>
@@ -139,7 +144,7 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
               Cancel
             </button>
             <button type="submit" className="btn add">
-              Add Song
+              Update Song
             </button>
           </div>
         </form>

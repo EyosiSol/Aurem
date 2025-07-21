@@ -98,10 +98,7 @@ body {
   border-radius: 12px;
 }
 .dropdownfilter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+  font-size: 24px;
 }
 .dropdown {
   position: relative;

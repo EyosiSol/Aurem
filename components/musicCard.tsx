@@ -6,10 +6,12 @@ import { musicCard } from '../types/musictype';
 type Props = {
   music: musicCard;
   setDeletion: (id: number) => void;
+  setEditing: (data: musicCard) => void;
 };
 
-export default function MusicCard({ music, setDeletion }: Props) {
+export default function MusicCard({ music, setDeletion, setEditing }: Props) {
   const { id, title, artist, album, releaseDate, genre } = music;
+
   return (
     <div className="card-container">
       <div className="card-header">
@@ -44,7 +46,13 @@ export default function MusicCard({ music, setDeletion }: Props) {
         </div>
 
         <div className="action-buttons">
-          <div className="action-btn edit">
+          <div
+            className="action-btn edit"
+            onClick={() => {
+              console.log('clicked:', { title });
+              setEditing(music);
+            }}
+          >
             <div>
               <BiEditAlt className="btn-icon" />
             </div>

@@ -5,7 +5,7 @@
       "title": "Lose Control",
       "artist": "Teddy Swims",
       "album": "I've Tried Everything But Therapy",
-      "releaseDate": "2022",
+      "releaseDate": "2023",
       "genre": "Pop Soul"
     },
     {
@@ -47,6 +47,14 @@
       "album": "Nevermind",
       "releaseDate": "1991",
       "genre": "Grunge"
+    },
+    {
+      "id": "3bdfb770-b93f-4e83-a231-5de49fec0f60",
+      "title": "Dolorum quidem ipsum",
+      "artist": "Eos omnis quis duis",
+      "genre": "Jazz",
+      "album": "Laborum architecto l",
+      "releaseDate": "4"
     }
   ]
 }
