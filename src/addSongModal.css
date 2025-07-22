@@ -180,3 +180,25 @@
   background: #27a376;
   color: var(--primary-foreground, #f8fafc);
 }
+
+@media (max-width: 450px) {
+  .overlay {
+    height: full;
+    padding-bottom: 100vh;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .close {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+  .modal-body {
+    padding: 18px 0px 0px 0px;
+  }
+  .form-group {
+    width: 280px;
+  }
+}

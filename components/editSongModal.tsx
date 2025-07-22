@@ -53,12 +53,12 @@ export default function EditSongModal({
       <div className="modal">
         <div className="modal-header">
           <div className="header-content">
-            <div className="title">Add a Song</div>
+            <div className="title">Edit Your Song</div>
             <div className="close" onClick={() => openEditModal()}>
               X
             </div>
           </div>
-          <div className="subtitle">Add a new song into your jacket</div>
+          <div className="subtitle">Edit your song from your jacket</div>
         </div>
 
         <form className="modal-body" onSubmit={handleSubmit}>
