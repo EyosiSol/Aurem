@@ -10,3 +10,24 @@
   font-size: 24px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0px 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .section {
+    padding: 0px 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+
+/* will use 500 for cards */
