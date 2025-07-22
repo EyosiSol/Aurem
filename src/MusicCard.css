@@ -184,3 +184,85 @@
   font-weight: 500;
   word-wrap: break-word;
 }
+
+@media screen and (max-width: 490px) {
+  .card-container {
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 0px;
+  }
+
+  .card-header {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .track-info {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .track-icon {
+    display: none;
+  }
+
+  .icon-shape {
+    width: 36px;
+    height: 36px;
+    left: 0;
+    top: 0;
+  }
+
+  .track-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .track-artist {
+    font-size: 14px;
+    line-height: 10px;
+  }
+
+  .track-album {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .card-body {
+    gap: 16px;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .track-meta {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .meta-text {
+    font-size: 10px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-text {
+    font-size: 12px;
+  }
+
+  .btn-icon {
+    width: 12px;
+    height: 12px;
+  }
+}

@@ -235,3 +235,10 @@ body {
     font-size: 12px;
   }
 }
+
+@media (max-width: 490px) {
+  .header-2 button {
+    font-size: 12px;
+    margin-right: 8%;
+  }
+} /* will use 500 for cards */
