@@ -3,7 +3,7 @@ import Header from '../components/header';
 import Filter from '../components/filter';
 import Section from '../components/section';
 import { musicCard } from '../types/musictype';
-import { deleteMusic, fetchMusic } from '../base-api/methods';
+import { deleteMusic, fetchMusic, searchMusic } from '../base-api/methods';
 import AddSongModal from '../components/addSongModal';
 import EditSongModal from '../components/editSongModal';
 
@@ -17,15 +17,21 @@ const App = () => {
   };
   const [editableSong, setEditableSong] = useState<musicCard>({} as musicCard);
   const [editmodalOpen, SeteditModalOpen] = useState<boolean>(false);
+  const [serachQuery, setsearchQuery] = useState<string>('');
 
-  //  fetch from backend
+  // fetch from backend or search
   useEffect(() => {
     const getMusic = async () => {
-      const data = await fetchMusic();
-      setMusics(data);
+      if (serachQuery.trim() !== '') {
+        const data = await searchMusic(serachQuery);
+        setMusics(data);
+      } else {
+        const data = await fetchMusic();
+        setMusics(data);
+      }
     };
     getMusic();
-  }, [deleteId, refetch]);
+  }, [serachQuery, deleteId, refetch]);
 
   console.log(`musics:`, musics);
 
@@ -48,12 +54,13 @@ const App = () => {
     SeteditModalOpen((prev) => !prev);
   };
 
-  console.log('editablesong:', editableSong);
+  // console.log('editablesong:', editableSong);
   // for now use prop drilling and you will change it later to Redux
 
+  console.log('searchQUery;', serachQuery);
   return (
     <>
-      <Header openModal={openModal} />
+      <Header openModal={openModal} setsearchQuery={setsearchQuery} />
       <Filter length={musics.length} />
       <Section
         musics={musics}
