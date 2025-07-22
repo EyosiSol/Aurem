@@ -1,3 +1,13 @@
+/* 
+
+  a header component handles the searching and the adding of songs 
+  - the searching is helped by a utility function that is imported as Debounce
+  - the use of Debounce is to have some time gap on each tyoed letter so that to decrease the amount of api calls so that the user may have a good user experience and also the server to not fetch on each letter 
+  - the debouce is helped with the useCallback hook which is used as Memoization and it returns the same function if the instance of the dependencies are not changed
+  - so on each change there will be a 300ms wait for triggering the backend
+
+*/
+
 import React, { useCallback } from 'react';
 import { IoMdAdd } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';

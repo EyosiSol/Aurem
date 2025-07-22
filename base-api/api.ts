@@ -1,3 +1,10 @@
+/*  
+- a base function that handles any kind of api requests
+- it takes a Url, a Method and Data both Method and Data being optional because they vary based on the Request type
+- handled by try catch block where it handles any kind of request gracefylly 
+- the return has message and reponse type that will help when integrating a pop up that we can show the user an interface that something faild
+*/
+
 const apiUrl = process.env.BASE_URL;
 
 interface CustomError {
@@ -17,7 +24,6 @@ const apiCall = async ({
   data?: unknown;
 }) => {
   const baseUrl = apiUrl;
-  console.log(`url:`, baseUrl);
 
   try {
     const response = await fetch(`${baseUrl}/${url}`, {

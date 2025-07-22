@@ -1,3 +1,14 @@
+/* 
+  a form modal for handling the editing system, it is basically a clone of the "add modal" the difference is triggered on edit
+  and it will bring the bring the data of the specific music and lets us edit 
+  - used useState here because of lack of time didn't incorporate Redux
+  - the form on submit handles the handleSubmit function
+  - the handleSubmit function takes the formData from the inputs and send to the api using the updateMusic method from methods.ts
+  - at the same time there is a trigger function where it will trigger a flag so that there will be a refetch 
+  - if it was nextjs we can use "tag" based caching that nextjs brought to handle caching gracefully
+   
+*/
+
 import { useState } from 'react';
 import '../src/addSongModal.css';
 import { musicCard } from '../types/musictype';

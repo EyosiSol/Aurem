@@ -1,3 +1,9 @@
+/* 
+  this is a component card to show the music data that is fetched from the backend aka db.json
+  it takes the id(used for editing and deleting), title, artist, album, releaseDate and genre
+
+*/
+
 import '../src/MusicCard.css';
 import { BiCalendar, BiSolidMusic, BiEditAlt, BiTrash } from 'react-icons/bi';
 import { PiVinylRecordBold } from 'react-icons/pi';

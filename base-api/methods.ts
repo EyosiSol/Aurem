@@ -1,3 +1,11 @@
+/* 
+  List of required methods to interact with the api
+  - it uses the apiCall from api.ts and create a secific custom request functions 
+  - each method has its own use Fetching, Adding(POST), Deleting(DELETE), updating(PATCH) and A query Function
+  - they return the response they got from the api.ts to the required place so we can use these to handle the requests in our required place
+
+*/
+
 import apiCall from './api';
 import type { musicCard } from '../types/musictype';
 

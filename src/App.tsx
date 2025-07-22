@@ -8,18 +8,21 @@ import AddSongModal from '../components/addSongModal';
 import EditSongModal from '../components/editSongModal';
 
 const App = () => {
-  const [musics, setMusics] = useState<musicCard[]>([]);
-  const [deleteId, setDeleteid] = useState<string>('');
-  const [addmodalOpen, SetaddModalOpen] = useState<boolean>(false);
-  const [refetch, setrefetch] = useState<boolean>(false);
+  // datas that are handled by usestate
+  const [musics, setMusics] = useState<musicCard[]>([]); //the fetched musics are setted to this array and will be displayed in search also
+  const [deleteId, setDeleteid] = useState<string>(''); // when a delete is clicked the data will be setted here and DELETE method from api will be handled
+  const [addmodalOpen, SetaddModalOpen] = useState<boolean>(false); //a flag to control the opening and closing of the "add song" form modal
+  const [refetch, setrefetch] = useState<boolean>(false); // a flag that is used to control refetching of the data
+  const [editableSong, setEditableSong] = useState<musicCard>({} as musicCard); //a data that will be setted when the edit button is clicked and it gives it to the form and will be sent to the backend to be eddited
+  const [editmodalOpen, SeteditModalOpen] = useState<boolean>(false); //a flag to control the opening and closing of the "edit song" form modal
+  const [serachQuery, setsearchQuery] = useState<string>(''); //a state to handle the searching of music based on any type of queries
+
+  //handles the trigger fetch to change from false to true and viceversa on each click
   const triggerFetch = () => {
     setrefetch((prev) => !prev);
   };
-  const [editableSong, setEditableSong] = useState<musicCard>({} as musicCard);
-  const [editmodalOpen, SeteditModalOpen] = useState<boolean>(false);
-  const [serachQuery, setsearchQuery] = useState<string>('');
 
-  // fetch from backend or search
+  // GET the Music list from backend or if there is a search query it will trigger searchMusic Method else it will trigger the GetmMusic
   useEffect(() => {
     const getMusic = async () => {
       if (serachQuery.trim() !== '') {
@@ -33,20 +36,23 @@ const App = () => {
     getMusic();
   }, [serachQuery, deleteId, refetch]);
 
-  console.log(`musics:`, musics);
-
+  //handles the setting of the deletedId
   const setDeletion = (id: number) => {
     setDeleteid(id.toString());
     handleDelete(id.toString());
   };
+  //handles the setting of the editablesong
   const setEditing = (data: musicCard) => {
     setEditableSong(data);
     openEditModal();
   };
+  //handles deletion of a song by triggering the deletMusic that has a method of "DELETE" and removes from the db.json
   const handleDelete = async (deleteId: string) => {
     const res = await deleteMusic(deleteId);
     return res;
   };
+
+  //handles the setting of the modals
   const openModal = () => {
     SetaddModalOpen(!addmodalOpen);
   };
@@ -54,10 +60,8 @@ const App = () => {
     SeteditModalOpen((prev) => !prev);
   };
 
-  // console.log('editablesong:', editableSong);
   // for now use prop drilling and you will change it later to Redux
 
-  console.log('searchQUery;', serachQuery);
   return (
     <>
       <Header openModal={openModal} setsearchQuery={setsearchQuery} />

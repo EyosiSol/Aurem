@@ -1,3 +1,13 @@
+/* 
+  a form modal for handling the adding system 
+  - used useState here because of lack of time didn't incorporate Redux
+  - the form on submit handles the handleSubmit function
+  - the handleSubmit function takes the formData from the inputs and send to the api using the addMusic method from methods.ts
+  - at the same time there is a trigger function where it will trigger a flag so that there will be a refetch 
+  - if it was nextjs we can use "tag" based caching that nextjs brought to handle caching gracefully
+   
+*/
+
 import { useState } from 'react';
 import '../src/addSongModal.css';
 import { v4 as uuidv4 } from 'uuid';
