@@ -16,7 +16,7 @@ type Props = {
 };
 
 export default function MusicCard({ music, setDeletion, setEditing }: Props) {
-  const { id, title, artist, album, releaseDate, genre } = music;
+  const { _id, title, artist, album, releaseDate, genre } = music;
 
   return (
     <div className="card-container">
@@ -68,7 +68,7 @@ export default function MusicCard({ music, setDeletion, setEditing }: Props) {
             className="action-btn delete"
             onClick={() => {
               console.log('clicked:', { title });
-              setDeletion(id);
+              setDeletion(_id);
             }}
           >
             <div>

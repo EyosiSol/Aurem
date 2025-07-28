@@ -1,5 +1,5 @@
 export type musicCard = {
-  id: number;
+  _id: number;
   title: string;
   artist: string;
   album: string;

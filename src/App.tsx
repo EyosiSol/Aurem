@@ -61,7 +61,7 @@ const App = () => {
   };
 
   // for now use prop drilling and you will change it later to Redux
-
+  console.log('musics:', musics);
   return (
     <>
       <Header openModal={openModal} setsearchQuery={setsearchQuery} />

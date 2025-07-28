@@ -33,7 +33,7 @@ export default function EditSongModal({
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault(); // prevent page reload
-    const id = data.id;
+    const id = data._id;
     const formData = {
       id,
       title,

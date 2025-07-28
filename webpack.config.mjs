@@ -48,7 +48,7 @@ const config = () => {
     devServer: {
       static: './dist',
       hot: true,
-      port: 3000,
+      port: 8000,
       open: true,
     },
     plugins: [

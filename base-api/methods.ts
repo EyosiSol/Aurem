@@ -26,8 +26,8 @@ export const addMusic = async (data: musicCard) => {
   return response;
 };
 
-export const deleteMusic = async (id: string) => {
-  const fetchURL = `musics/${id}`;
+export const deleteMusic = async (_id: string) => {
+  const fetchURL = `musics/${_id}`;
   const response = await apiCall({
     url: fetchURL,
     method: 'DELETE',
@@ -36,7 +36,7 @@ export const deleteMusic = async (id: string) => {
 };
 
 export const updateMusic = async (data: musicCard) => {
-  const fetchURL = `musics/${data.id}`;
+  const fetchURL = `musics/${data._id}`;
   const response = await apiCall({
     url: fetchURL,
     method: 'PATCH',
