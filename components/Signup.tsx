@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+const SignUp = () => {
+  const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setpassword] = useState<string>('');
 
@@ -14,16 +15,27 @@ const Login = () => {
     console.log('form:', formData);
   };
   return (
-    <div className="login-container">
-      <div className="login-img"> image</div>
-      <div className="login">
-        <div className="log-description">
+    <div className="Signup-container">
+      <div className="Signup-img"> </div>
+      <div className="Signup">
+        <div className="Sign-description">
           <h1>Welcome to Aurem</h1>
           <p>Your Personal Music Record Sleeve</p>
         </div>
-        <div className="login-form">
-          <h3>Log-in to Continue</h3>
+        <div className="Signup-form">
+          <h3>Sign-Up and Enjoy</h3>
           <form onSubmit={handleSubmit}>
+            <label htmlFor="name">
+              <p>Name</p>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
             <label htmlFor="email">
               <p>Email</p>
               <input
@@ -46,10 +58,10 @@ const Login = () => {
                 required
               />
             </label>
-            <button type="submit"> Login</button>
+            <button type="submit">Sign up</button>
           </form>
           <p>
-            You are new to Aurem?<h4>Sign-up</h4>
+            Already using Aurem?<h4>Log-in</h4>
           </p>
         </div>
       </div>
@@ -57,4 +69,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

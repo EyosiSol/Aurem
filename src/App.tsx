@@ -7,6 +7,7 @@ import { deleteMusic, fetchMusic, searchMusic } from '../base-api/methods';
 import AddSongModal from '../components/addSongModal';
 import EditSongModal from '../components/editSongModal';
 import Login from '../components/Login';
+import SignUp from '../components/Signup';
 
 const App = () => {
   // data that are handled by usestate
@@ -65,7 +66,8 @@ const App = () => {
   console.log('musics:', musics);
   return (
     <>
-      <Login />
+      {/* <Login /> */}
+      <SignUp />
       {/* <Header openModal={openModal} setsearchQuery={setsearchQuery} />
       <Filter length={musics.length} />
       <Section
