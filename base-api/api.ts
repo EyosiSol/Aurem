@@ -14,6 +14,10 @@ interface CustomError {
   };
 }
 
+import { getAuth } from '../utils/authStore';
+
+const { token } = getAuth();
+
 const apiCall = async ({
   url,
   method = 'GET',
@@ -30,6 +34,7 @@ const apiCall = async ({
       method: method,
       headers: {
         'Content-Type': 'application/json',
+        authorization: `Bearer ${token || ''}`,
       },
       body: method !== 'GET' ? JSON.stringify(data) : undefined,
     });

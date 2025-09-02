@@ -8,6 +8,9 @@
   font-family:
     Space Grotesk,
     sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,12 +18,12 @@ body {
   font-family:
     Space Grotesk,
     sans-serif;
-  background-image:
+  /* background-image:
     linear-gradient(rgba(65, 65, 65, 0.85), rgba(65, 65, 65, 0.85)),
-    url('../public/images/headeset1.jpg');
+    url('../public/images/headeset1.jpg'); */
   background-size: cover;
   background-position: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 
 /* header on Laptops */
@@ -162,6 +165,84 @@ body {
 .amount {
   font-size: 18px;
   color: gray;
+}
+
+.login-container {
+  display: flex;
+  border: 1px solid black;
+  height: 100dvh;
+}
+
+.login-img {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.334), rgba(0, 0, 0, 0.019)),
+    url('../public/images/headeset1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+.login {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.log-description {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 4px;
+}
+.log-description > p {
+  text-align: center;
+  height: fit-content;
+  font-size: 16px;
+  color: #848383;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 50%;
+  align-items: center;
+  gap: 12px;
+}
+.login-form h3 {
+  font-size: 20px;
+}
+.login form {
+  width: 100%;
+}
+
+.login label,
+.login input {
+  width: 100%;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login input {
+  height: fit-content;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.login label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.login label > p {
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {

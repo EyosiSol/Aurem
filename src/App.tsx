@@ -6,9 +6,10 @@ import { musicCard } from '../types/musictype';
 import { deleteMusic, fetchMusic, searchMusic } from '../base-api/methods';
 import AddSongModal from '../components/addSongModal';
 import EditSongModal from '../components/editSongModal';
+import Login from '../components/Login';
 
 const App = () => {
-  // datas that are handled by usestate
+  // data that are handled by usestate
   const [musics, setMusics] = useState<musicCard[]>([]); //the fetched musics are setted to this array and will be displayed in search also
   const [deleteId, setDeleteid] = useState<string>(''); // when a delete is clicked the data will be setted here and DELETE method from api will be handled
   const [addmodalOpen, SetaddModalOpen] = useState<boolean>(false); //a flag to control the opening and closing of the "add song" form modal
@@ -64,7 +65,8 @@ const App = () => {
   console.log('musics:', musics);
   return (
     <>
-      <Header openModal={openModal} setsearchQuery={setsearchQuery} />
+      <Login />
+      {/* <Header openModal={openModal} setsearchQuery={setsearchQuery} />
       <Filter length={musics.length} />
       <Section
         musics={musics}
@@ -80,7 +82,7 @@ const App = () => {
           triggerFetch={triggerFetch}
           data={editableSong}
         />
-      )}
+      )} */}
     </>
   );
 };
