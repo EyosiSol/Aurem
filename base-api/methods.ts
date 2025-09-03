@@ -11,10 +11,10 @@ import type { musicCard } from '../types/musictype';
 
 import { getAuth } from '../utils/authStore';
 
-const { token: rawToken, user } = getAuth();
-const token = rawToken ?? undefined;
-
 export const fetchMusic = async () => {
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+
   const fetchURL = `${user.id}/musics`;
   console.log('url:', fetchURL);
   const response = await apiCall({ url: fetchURL, token: token });
@@ -22,6 +22,8 @@ export const fetchMusic = async () => {
 };
 
 export const addMusic = async (data: musicCard) => {
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
   const fetchURL = `${user.id}/musics`;
   const response = await apiCall({
     url: fetchURL,
@@ -33,6 +35,8 @@ export const addMusic = async (data: musicCard) => {
 };
 
 export const deleteMusic = async (_id: string) => {
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
   const fetchURL = `${user.id}/musics/${_id}`;
   const response = await apiCall({
     url: fetchURL,
@@ -43,6 +47,8 @@ export const deleteMusic = async (_id: string) => {
 };
 
 export const updateMusic = async (data: musicCard) => {
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
   console.log('data:', data);
   const fetchURL = `${user.id}/musics/${data._id}`;
   console.log('fetchURl:', fetchURL);
@@ -57,6 +63,8 @@ export const updateMusic = async (data: musicCard) => {
 };
 
 export const searchMusic = async (serach: string) => {
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
   const fetchURL = `${user.id}/musics?q=${serach}`;
   const response = await apiCall({
     url: fetchURL,

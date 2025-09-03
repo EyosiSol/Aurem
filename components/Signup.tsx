@@ -20,7 +20,7 @@ const SignUp = () => {
     const res = await Sign(formData);
     console.log('form:', res);
     saveAuth(res.token, res.user);
-    const token = getAuth();
+    const token = await getAuth();
     console.log(token);
 
     if (token) {

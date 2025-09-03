@@ -50,6 +50,7 @@ const config = () => {
       hot: true,
       port: 8000,
       open: true,
+      historyApiFallback: true,
     },
     plugins: [
       new HtmlWebpackPlugin({

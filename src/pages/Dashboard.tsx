@@ -28,10 +28,9 @@ const Dashboard = () => {
       if (serachQuery.trim() !== '') {
         const data = await searchMusic(serachQuery);
         setMusics(data);
-      } else {
-        const data = await fetchMusic();
-        setMusics(data);
       }
+      const data = await fetchMusic();
+      setMusics(data);
     };
     getMusic();
   }, [serachQuery, deleteId, refetch]);

@@ -36,7 +36,7 @@ const Header = ({ openModal, setsearchQuery }: Prop) => {
   };
   const handleLogout = () => {
     clearAuth();
-    navigate('/login', { replace: true });
+    navigate('/login');
   };
 
   return (

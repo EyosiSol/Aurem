@@ -19,16 +19,16 @@ const Login = () => {
     console.log('form:', res);
     saveAuth(res.token, res.user);
 
-    const token = getAuth();
+    const token = await getAuth();
     console.log(token);
 
     if (token) {
-      navigate('/', { replace: true });
+      navigate('/');
     }
   };
 
   const handleRoute = () => {
-    navigate('/SignUp', { replace: true });
+    navigate('/SignUp');
   };
 
   return (
