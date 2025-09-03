@@ -38,6 +38,7 @@ body {
   position: fixed;
   width: 100vw;
   top: 0px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   padding-left: 32px;
@@ -285,11 +286,21 @@ body {
   align-items: center;
   gap: 6px;
 }
-.login-form p > h4:hover,
-.Signup-form p > h4:hover {
+.login-form div > h4:hover,
+.Signup-form div > h4:hover {
   text-decoration: underline;
-  border: 1px solid black;
   cursor: pointer;
+}
+
+.dashboard {
+  height: 100dvh;
+  background-image:
+    linear-gradient(rgba(151, 150, 150, 0.6), rgba(160, 157, 157, 0.6)),
+    url('../public/images/headeset1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
 }
 
 @media (max-width: 768px) {

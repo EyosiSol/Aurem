@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Sign } from '../base-api/auth';
+import { getAuth, saveAuth } from '../utils/authStore';
 
 const SignUp = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setpassword] = useState<string>('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -12,7 +17,19 @@ const SignUp = () => {
       email,
       password,
     };
-    console.log('form:', formData);
+    const res = await Sign(formData);
+    console.log('form:', res);
+    saveAuth(res.token, res.user);
+    const token = getAuth();
+    console.log(token);
+
+    if (token) {
+      navigate('/', { replace: true });
+    }
+  };
+
+  const handleRoute = () => {
+    navigate('/login', { replace: true });
   };
   return (
     <div className="Signup-container">
@@ -60,9 +77,9 @@ const SignUp = () => {
             </label>
             <button type="submit">Sign up</button>
           </form>
-          <p>
-            Already using Aurem?<h4>Log-in</h4>
-          </p>
+          <div>
+            Already using Aurem?<h4 onClick={() => handleRoute()}>Log-in</h4>
+          </div>
         </div>
       </div>
     </div>
