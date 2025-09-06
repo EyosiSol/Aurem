@@ -9,7 +9,8 @@ export const saveAuth = (token: string, user: userType) => {
 
 export const getAuth = () => {
   const token = Cookies.get('token') || null;
-  const user = Cookies.get('user') ? JSON.parse(Cookies.get('user')!) : null;
+  const userCookie = Cookies.get('user');
+  const user = userCookie ? JSON.parse(userCookie) : null;
   return { token, user };
 };
 
