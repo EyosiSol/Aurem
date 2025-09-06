@@ -67,7 +67,7 @@ const SignUp = () => {
             <label htmlFor="password">
               <p>Password</p>
               <input
-                type="text"
+                type="password"
                 name="password"
                 id="password"
                 value={password}
