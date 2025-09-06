@@ -56,7 +56,7 @@ const SignUp = () => {
             <label htmlFor="email">
               <p>Email</p>
               <input
-                type="text"
+                type="email"
                 name="email"
                 id="email"
                 value={email}
