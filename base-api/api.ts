@@ -18,18 +18,22 @@ const apiCall = async ({
   url,
   method = 'GET',
   data = [],
+  token = '',
 }: {
   url: string;
   method?: string;
   data?: unknown;
+  token?: string;
 }) => {
   const baseUrl = apiUrl;
 
   try {
+    console.log('token:', token);
     const response = await fetch(`${baseUrl}/${url}`, {
       method: method,
       headers: {
         'Content-Type': 'application/json',
+        authorization: `Bearer ${token || ''}`,
       },
       body: method !== 'GET' ? JSON.stringify(data) : undefined,
     });

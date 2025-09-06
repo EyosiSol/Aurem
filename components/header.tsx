@@ -12,6 +12,9 @@ import React, { useCallback } from 'react';
 import { IoMdAdd } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';
 import { debounce } from '../utils/debounce';
+import { clearAuth } from '../utils/authStore';
+import { useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 
 type Prop = {
   openModal: () => void;
@@ -26,9 +29,16 @@ const Header = ({ openModal, setsearchQuery }: Prop) => {
     []
   );
 
+  const navigate = useNavigate();
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     debouncedSearch(e.target.value);
   };
+  const handleLogout = () => {
+    clearAuth();
+    navigate('/login');
+  };
+
   return (
     <div className="header">
       <div className="header-2">
@@ -46,6 +56,9 @@ const Header = ({ openModal, setsearchQuery }: Prop) => {
         <button type="submit" onClick={() => openModal()}>
           <IoMdAdd />
           Add Song
+        </button>
+        <button type="submit" onClick={() => handleLogout()}>
+          <FiLogOut />
         </button>
       </div>
       <div className="search2">

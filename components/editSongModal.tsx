@@ -29,18 +29,18 @@ export default function EditSongModal({
   const [artist, setartist] = useState<string>(data.artist);
   const [genre, setgenre] = useState<string>(data.genre);
   const [album, setAlbum] = useState<string>(data.album);
-  const [releaseDate, setreleaseDate] = useState<string>(data.releaseDate);
+  const [releaseYear, setreleaseYear] = useState<string>(data.releaseYear);
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault(); // prevent page reload
-    const id = data._id;
+    const _id = data._id;
     const formData = {
-      id,
+      _id,
       title,
       artist,
       genre,
       album,
-      releaseDate,
+      releaseYear,
     };
     console.log('editedForm:', formData); // Send to backend or handle logic
     const res = await updateMusic(formData as unknown as musicCard);
@@ -54,7 +54,7 @@ export default function EditSongModal({
     setartist('');
     setgenre('');
     setAlbum('');
-    setreleaseDate('');
+    setreleaseYear('');
     triggerFetch();
     openEditModal();
   };
@@ -138,8 +138,8 @@ export default function EditSongModal({
               <input
                 type="number"
                 placeholder="Eg. 1998"
-                value={releaseDate}
-                onChange={(e) => setreleaseDate(e.target.value)}
+                value={releaseYear}
+                onChange={(e) => setreleaseYear(e.target.value)}
                 className="input-placeholder"
                 required
               />

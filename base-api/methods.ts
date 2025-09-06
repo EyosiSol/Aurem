@@ -9,48 +9,67 @@
 import apiCall from './api';
 import type { musicCard } from '../types/musictype';
 
+import { getAuth } from '../utils/authStore';
+
 export const fetchMusic = async () => {
-  const fetchURL = 'musics';
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+
+  const fetchURL = `${user.id}/musics`;
   console.log('url:', fetchURL);
-  const response = await apiCall({ url: fetchURL });
+  const response = await apiCall({ url: fetchURL, token: token });
   return response;
 };
 
 export const addMusic = async (data: musicCard) => {
-  const fetchURL = `musics`;
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+  const fetchURL = `${user.id}/musics`;
   const response = await apiCall({
     url: fetchURL,
     method: 'POST',
     data: data,
+    token: token,
   });
   return response;
 };
 
 export const deleteMusic = async (_id: string) => {
-  const fetchURL = `musics/${_id}`;
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+  const fetchURL = `${user.id}/musics/${_id}`;
   const response = await apiCall({
     url: fetchURL,
     method: 'DELETE',
+    token: token,
   });
   return response;
 };
 
 export const updateMusic = async (data: musicCard) => {
-  const fetchURL = `musics/${data._id}`;
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+  console.log('data:', data);
+  const fetchURL = `${user.id}/musics/${data._id}`;
+  console.log('fetchURl:', fetchURL);
   const response = await apiCall({
     url: fetchURL,
     method: 'PATCH',
     data: data,
+    token: token,
   });
 
   return response;
 };
 
 export const searchMusic = async (serach: string) => {
-  const fetchURL = `musics?q=${serach}`;
+  const { token: rawToken, user } = await getAuth();
+  const token = rawToken ?? undefined;
+  const fetchURL = `${user.id}/musics?q=${serach}`;
   const response = await apiCall({
     url: fetchURL,
     method: 'GET',
+    token: token,
   });
 
   return response;

@@ -3,6 +3,6 @@ export type musicCard = {
   title: string;
   artist: string;
   album: string;
-  releaseDate: string;
+  releaseYear: string;
   genre: string;
 };

@@ -24,7 +24,7 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
   const [artist, setartist] = useState<string>('');
   const [genre, setgenre] = useState<string>('Rock & Roll');
   const [album, setAlbum] = useState<string>('');
-  const [releaseDate, setreleaseDate] = useState<string>('');
+  const [releaseYear, setreleaseYear] = useState<string>('');
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault(); // prevent page reload
@@ -35,7 +35,7 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
       artist,
       genre,
       album,
-      releaseDate,
+      releaseYear,
     };
     console.log(formData); // Send to backend or handle logic
     const res = await addMusic(formData as unknown as musicCard);
@@ -49,7 +49,7 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
     setartist('');
     setgenre('');
     setAlbum('');
-    setreleaseDate('');
+    setreleaseYear('');
     openModal();
   };
 
@@ -132,8 +132,8 @@ export default function AddSongModal({ openModal, triggerFetch }: Prop) {
               <input
                 type="number"
                 placeholder="Eg. 1998"
-                value={releaseDate}
-                onChange={(e) => setreleaseDate(e.target.value)}
+                value={releaseYear}
+                onChange={(e) => setreleaseYear(e.target.value)}
                 className="input-placeholder"
                 required
               />
