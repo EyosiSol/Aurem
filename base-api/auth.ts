@@ -3,7 +3,7 @@ import apiCall from './api';
 import type { signUp, login } from '../types/userType';
 
 export const Sign = async (data: signUp) => {
-  const url = 'register';
+  const url = 'signup';
   console.log('url:', url);
 
   const response = await apiCall({
